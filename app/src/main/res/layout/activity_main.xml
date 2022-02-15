@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#E91E63"
+                android:fontFamily="sans-serif-black"
+                android:onClick="btnClick"
+                android:text="Clear"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btn_getlocatiomn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#30a24c"
+                android:onClick="btnClick"
+                android:text="Current Location"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btn_restaurants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:visibility="invisible"/>
+
+
+            <Button
+                android:id="@+id/btn_library"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/btn_museum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btn_school"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btn_cafe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btn_hospital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            android:id="@+id/btn_Fav_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="#30a24c"
+            android:onClick="btnClick"
+            android:text="See Favourites"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</LinearLayout>
